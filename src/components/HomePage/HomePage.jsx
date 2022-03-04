@@ -1,9 +1,9 @@
-
+import { Container } from './HomePage.elements'
 
 const HomePage = () => {
     return (
-        <div className='container'>
-            
-        </div>
+        <Container></Container>
     )
 }
+
+export default HomePage;
