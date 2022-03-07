@@ -1,7 +1,10 @@
 import { useState } from 'react';
 import { MenuContainer, Logo, MenuWrapper, Hamburger, 
-        Navbar, NavLogo, List, Item, Link, Footer, FooterList, FooterItem,
+        Navbar, NavLogo, List, Dropdown, DropdownItem, DropdownImage, Item, Link, Footer, FooterList, FooterItem,
         FooterLink } from './Menu.elements'
+import Silla from '../../assets/images/silla-negra.png'
+import Sillon from '../../assets/images/sofa-blanco.png'
+import Mesa from '../../assets/images/mesa-negra.png'
 
 const Menu = () => {
 
@@ -18,13 +21,52 @@ const Menu = () => {
                     <Hamburger click={click}></Hamburger>
             </MenuWrapper>
             <Navbar click={click}>
-            <NavLogo>mater</NavLogo>
-
+                <NavLogo>mater</NavLogo>
                 <List>
-                    <Item><Link>collection</Link></Item>
-                    <Item><Link>design</Link></Item>
-                    <Item><Link>craftmanship</Link></Item>
-                    <Item><Link>ethics</Link></Item>
+                    <Item>
+                        <Link>collection</Link>
+                        <Dropdown>
+                            <DropdownItem id='1'>
+                                furniture
+                                <DropdownImage src={ Sillon }/>
+                            </DropdownItem>
+                            <DropdownItem id='2'>
+                                lighting
+                                <DropdownImage src={ Mesa }/>
+                            </DropdownItem>
+                            <DropdownItem id='3'>
+                                accesories
+                                <DropdownImage src={ Silla }/>
+                            </DropdownItem>
+                        </Dropdown>
+                    </Item>
+                    <Item>
+                        <Link>design</Link>
+                        <Dropdown>
+                            <DropdownItem>furniture</DropdownItem>
+                            <DropdownItem>lighting</DropdownItem>
+                            <DropdownItem>accesories</DropdownItem>
+                        </Dropdown>
+                        <DropdownImage />
+                    </Item>
+                    <Item>
+                        <Link>craftmanship</Link>
+                        <Dropdown>
+                            <DropdownItem>furniture</DropdownItem>
+                            <DropdownItem>lighting</DropdownItem>
+                            <DropdownItem>accesories</DropdownItem>
+                        </Dropdown>
+                        <DropdownImage />
+                    </Item>
+                    <Item>
+                        <Link>ethics</Link>
+                        <Dropdown>
+                            <DropdownItem>furniture</DropdownItem>
+                            <DropdownItem>lighting</DropdownItem>
+                            <DropdownItem>accesories</DropdownItem>
+                        </Dropdown> 
+                        <DropdownImage />
+                    </Item>
                 </List>
                 <Footer>
                     <FooterList>
