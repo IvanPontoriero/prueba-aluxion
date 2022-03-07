@@ -151,12 +151,12 @@ export const Item = styled.li`
     }
 
     &:hover ul li:nth-of-type(2) {
-        animation: ${animation} 1000ms ease-in;
+        animation: ${animation} 500ms ease-in;
         animation-delay: 0ms;
     }
 
     &:hover ul li:nth-of-type(3) {
-        animation: ${animation} 1000ms ease-in;
+        animation: ${animation} 500ms ease-in;
         animation-delay: 150ms;
     }
 `;
@@ -232,6 +232,11 @@ export const FooterItem = styled.li`
     font-size: 1rem;
     font-weight: 400;
     height: 2vh;
+    transition: all 500ms;
+
+    &:hover {
+        text-shadow: 0 0 .75em #222222, 0 0 .5em #d9d9d9; 
+    }
 `;
 
 export const FooterLink = styled.a`

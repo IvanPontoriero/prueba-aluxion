@@ -13,30 +13,45 @@ export const DotsContainer = styled.div`
     border-top: 1px solid ${vars.CLEAR_TEXT};
     padding-left: 3em;
     z-index: 5;
+
+    @media screen and (min-width: 768px) {
+        height: 10vh;
+    }
 `;
 
 export const DotBlock = styled.div`
     cursor: pointer;
     width: auto;
-    height: 100%;
+    // height: 100%;
     padding: .8em;
+    padding-top: 0;
     border: 1px solid ${vars.CLEAR_TEXT};
-    opacity: .5;
-    transition: all 500ms;
+    opacity: .8;
+    transition: all 1000ms;
+
+    &:hover {
+        transform-origin: top-left;
+        opacity: 1;
+        border-top: 1px solid #000000;
+    }
 `;
 
 
 export const Number = styled.span`
-    font-size: .7rem;
+    font-size: .5rem;
     color: ${vars.CLEAR_TEXT};
 
-    ::after {
-
+    @media screen and (min-width: 768px) {
+        font-size: .7rem;
     }
 `;
 
 export const Text = styled.p`
-    font-size: 1rem;
+    font-size: .8rem;
     color: ${vars.DARK_TEXT};
     letter-spacing: ${vars.SPACCING};
+
+    @media screen and (min-width: 768px) {
+        font-size: 1rem;
+    }
 `;

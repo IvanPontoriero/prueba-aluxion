@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { keyframes } from 'styled-components'
 import * as vars from '../../styleVars/style.variables';
 
 export const Container = styled.div`
@@ -12,14 +13,24 @@ export const ParallaxContainer = styled.div`
     justify-content: center;
     align-content: center;
     width: 100vw;
-    // height: 100vh;
-    padding-inline: 2em;
+    height: 80vh;
+    // padding-inline: 2em;
     scroll-behaviour: smooth;
+    position: absolute;
+    top: -450px;
+    left: -370px;
 
     @media screen and (min-width: 768px) {
         flex-direction: row;
         justify-content: space-evenly;
         padding-inline: 3em;
+        top: -520px;
+        left: -750px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        top: -250px;
+        left: -630px;
     }
 `;
 
@@ -66,8 +77,8 @@ export const Subtitle = styled.h2`
 
 export const Button = styled.button`
     position: fixed;
-    top: 70%;
-    left: 5%;
+    top: 21%;
+    left: 3%;
     padding: 1em;
     margin: 1em;
     background: #000000;
@@ -81,6 +92,16 @@ export const Button = styled.button`
     :hover {
         border-radius: 0 1em;
         box-shadow: 0 0 2em #222222;
+    }
+
+    @media screen and (min-width: 768px) {
+        top: 33%;
+        left: 3%;
+    }
+
+    @media screen and (min-width: 1024px) {
+        top: 65%;
+        left: 9%;
     }
 `; 
 

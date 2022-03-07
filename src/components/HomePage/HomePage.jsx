@@ -6,15 +6,19 @@ import Silla from '../../assets/images/silla-negra.png'
 import Sillon from '../../assets/images/sofa-blanco.png'
 import Mesa from '../../assets/images/mesa-negra.png'
 
-const MoveInScrollOut = batch(Sticky(), Move(0, 500), Fade(0, 1))
+const defineHeight = {
+    height: '80vh'
+}
+
+const MoveInScrollOut = batch(Sticky(), Move(0, 500), Fade(0, 1)) 
 
 const HomePage = () => {
 
     return (
         <ScrollContainer>
             <Button>Product details</Button>
-            <ScrollPage page={0}>
-                <Animator animation={batch(Sticky(), Move(0, -500), Fade(0, 1))}>
+            <ScrollPage page={0} style={defineHeight}>
+                <Animator animation={batch(Sticky(), Move(0, -500), Fade(0, 1))} >
                     <ParallaxContainer id='shell-dining-chair' >
                         <LeftSection>
                             <GrayText>Michael W. Dreeben</GrayText>
@@ -31,7 +35,7 @@ const HomePage = () => {
                     </ParallaxContainer>
                 </Animator>                
             </ScrollPage>  
-            <ScrollPage page={1}>
+            <ScrollPage page={1} style={defineHeight}>
                 <Animator animation={MoveInScrollOut} >
                     <ParallaxContainer id='dunes-anthrazite-black'>
                             <LeftSection>
@@ -44,13 +48,13 @@ const HomePage = () => {
                                 </GrayText>
                             </LeftSection>
                             <RightSection>
-                                <Image src={ Mesa } alt='silla negra' />                                              
-                            </RightSection>
-                    </ParallaxContainer>
-                </Animator>                
+                                <Image src={ Mesa } alt='silla negra' />             
+                            </RightSection>                            
+                        </ParallaxContainer>
+                    </Animator>    
             </ScrollPage>
-            <ScrollPage page={2}>
-                <Animator animation={MoveInScrollOut} >
+            <ScrollPage page={2} style={defineHeight}>
+                <Animator animation={MoveInScrollOut}>
                     <ParallaxContainer id='deluxe-couch-white'>
                         <LeftSection>
                             <GrayText>André-Charles Boulle</GrayText>

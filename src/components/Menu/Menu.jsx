@@ -43,11 +43,19 @@ const Menu = () => {
                     <Item>
                         <Link>design</Link>
                         <Dropdown>
-                            <DropdownItem>furniture</DropdownItem>
-                            <DropdownItem>lighting</DropdownItem>
-                            <DropdownItem>accesories</DropdownItem>
+                            <DropdownItem id='1'>
+                                furniture
+                                <DropdownImage src={ Sillon }/>
+                            </DropdownItem>
+                            <DropdownItem id='2'>
+                                lighting
+                                <DropdownImage src={ Mesa }/>
+                            </DropdownItem>
+                            <DropdownItem id='3'>
+                                accesories
+                                <DropdownImage src={ Silla }/>
+                            </DropdownItem>
                         </Dropdown>
-                        <DropdownImage />
                     </Item>
                     <Item>
                         <Link>craftmanship</Link>
@@ -56,7 +64,6 @@ const Menu = () => {
                             <DropdownItem>lighting</DropdownItem>
                             <DropdownItem>accesories</DropdownItem>
                         </Dropdown>
-                        <DropdownImage />
                     </Item>
                     <Item>
                         <Link>ethics</Link>
@@ -65,7 +72,6 @@ const Menu = () => {
                             <DropdownItem>lighting</DropdownItem>
                             <DropdownItem>accesories</DropdownItem>
                         </Dropdown> 
-                        <DropdownImage />
                     </Item>
                 </List>
                 <Footer>

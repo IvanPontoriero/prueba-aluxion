@@ -1,10 +1,17 @@
+import { useState } from 'react'
 import { DotsContainer, DotBlock, Number, Text} from './SliderDots.elements'
 import { Link } from 'react-scroll'
 
 const SliderDots = () => {
+    const [ click, setClick ] = useState(false)
+
+    const changeClick = () => {
+        setClick(!click)
+    }
+
     return (
         <DotsContainer>
-            <Link activeClass="active" to="shell-dining-chair" containerId="shell-dining-chair" spy={true} 
+            <Link activeClass="active" to="shell-dining-chair" spy={true} 
                     smooth={true} offset={100} duration={500}>
                 <DotBlock>
                     <Number>01</Number>
